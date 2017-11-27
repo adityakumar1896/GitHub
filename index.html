@@ -1,0 +1,106 @@
+<script>
+        function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+<style>
+       
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+
+        body{
+              
+              overflow-x:auto;
+              width: 1250px;
+        }
+        
+        .topnav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: center;
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
+}
+        .dol
+        {
+                background-color: dodgerblue;
+                color: white;
+                font-family:cursive;
+                -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+                -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+                box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+                border-radius: 6px;
+        }
+        #headd{
+                padding: 30px;
+        }
+        #para
+        {
+                padding-bottom: 30px;
+        }
+        #para1{
+                padding: 30px;
+        }
+        .dol1
+        {
+                background-color: white;
+                color: dodgerblue;
+                height: 70%;
+                font-family:cursive;
+                -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+                -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+                box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+                border-radius: 6px;
+        }
+
+</style>
+<body>
+        <center>
+                <div class="dol">
+                        <h1 id="headd">Welcome to LMS</h1>
+                        <p id="para">A Leave management system for you</p>
+                        <div class="topnav" id="myTopnav">
+                                <a href="index.html">About</a>
+                                <a href="signup.php">Sign Up</a>
+                                <a href="login.php">Login</a>
+                                <a href="contact.html">Contact</a>
+                                <a href="javascript:void(0);" class="icon" onClick="myFunction()">&#9776;</a>
+                        </div>
+                                      
+                       
+                </div>
+                <div class="dol1">
+                        <p id="para1">
+                                Welcome to LMS.</br>LMS provides you a Leave management system</br>
+                                for your organization or company.Enjoy this system.</br> 
+                        </p>
+                        
+                </div>
+        </center>
+
+</body>

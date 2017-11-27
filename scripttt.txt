@@ -1,0 +1,35 @@
+<?php
+        //session_start();        
+        if(isset($_POST['submit1']))
+        {
+                $pwd=md5($_POST['t3']);
+                $emai=$_POST['t1'];
+                $conn=mysqli_connect("localhost","root","narayan");
+                mysqli_select_db($conn,"test");
+                $count=0;
+                $result=mysqli_query($conn,"select email,numbe from cloud_info where email='$_POST[t1]' && pass='$pwd'");
+                $count=mysqli_num_rows($result);
+                if($count>0)
+                {
+                        $_SESSION['t1']=$emai;
+                        header("Location: http://localhost/Lock/welcome.php",true);
+                        exit;
+                        
+                }
+                else
+                {
+                        ?>
+                         <script>
+                            var eg=document.getElementById('lab1');
+                            eg.innerHTML="Account not found/invalid credentials";
+                            eg.style.padding="5px";
+                                      eg.style.fontSize="12px";
+                                      eg.style.backgroundColor = "#FFC0CB";
+                                      eg.style.border = "0.5px solid red";
+                                      eg.style.color="red";
+                        </script>
+                        
+                        <?php
+                }
+        }
+?>
